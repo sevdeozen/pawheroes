@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/paww.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-left: 8%;
+    padding-right: 8%;
+
+}
+
+.logo{
+    color: rgb(228, 115, 29);
+    font-size: 35px;
+    cursor: pointer;
+
+}
+span{
+    color: rgb(75, 46, 22);
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: rgb(75, 46, 22);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize; /*sadece baş harfler büyük yapar */
+    
+}
+
+nav ul li a:hover{
+    color: rgb(228, 115, 29);
+    transition: .4s; /* renk değişimi yapar*/
+    /* ctrl+ ö basınca yorum satırı olarak görünür */
+
+}
+.btn{
+    text-decoration: none;
+    color: rgb(97, 66, 25);
+    border: 3px solid rgb(97, 66, 25);
+    padding: 1rem 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+    border-radius: 15px;
+
+}  
+
+.btn::before{
+    content: "9.99 $"; /* htmlde subscribe gizi yazı yazdırmak için */
+    font-weight: bold;
+    color: rgb(195, 65, 65);
+    position: absolute; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: blanchedalmond;
+    transform: translateY(-100%) ;
+    transition: all 1s;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover::before{
+    transform: translateY(0);
+    
+}
+.content{
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    transform: translateY(-50%); 
+}
+h1{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 65px;
+}
+h3{
+    color: #df74af;
+    font-size: 25px;
+    margin-bottom: 80px;
+
+}
+h4{
+    color: #414143;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.newslatter form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+
+}
+.newslatter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px; /* saat yönünde üst,sağ,aşağı,sol */
+    border: 2px solid #f46d19 ;
+    outline: none;
+    border-radius: 30px;
+    
+}
+.newslatter form a{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #FE7C2B;
+    color: white;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 4px;
+    right: 3px;
+    text-decoration: none;
+}
+
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #FFF794;
+}
+
+.about img{
+    height: auto;
+    width: 430px;
+}
+
+.about-text{
+    width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /*aralarında ve içinde boşluk verir */
+}
+.about-text h2{
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+}
+.about-text h5{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+} 
+
+.about-text p{
+    color: #4B2E16;
+    letter-spacing: 1px;
+    line-height: 28px; /* satır yüksekliği verir*/
+    font-size: 18px;
+    margin-bottom: 45px;
+
+} 
+
+button{
+    border: none;
+    padding: 1rem 2rem;
+    background: #f46d19;
+    color: #FFF;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}  
+
+button::before{
+    content: ""; 
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -10px;
+    left: -10px;
+    border-top: 4px solid #858585;
+    border-left: 4px solid #858585;
+    transition: all 0.25s;
+
+}
+
+button::after{
+    content: ""; 
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 4px solid #858585;
+    border-right: 4px solid #858585;
+    transition: all 0.25s;
+
+}
+button:hover::before,
+button:hover::after{
+    height: 100%;
+    width: 100%;
+}
+
+.service{
+    background: #FFF794;
+    width: 100%;
+    padding: 100px 0px;
+
+}
+
+.title h2{
+    color: white;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.box{
+    display: flex; /* içindeki elemanlar yanyana gelsin*/
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+.card {
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px ;
+    background-color: #f9f06c;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+.card i{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: #f798cc;
+}
+h5{
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+} .pra p{
+    color: #858585;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+
+}
